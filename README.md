@@ -5,7 +5,7 @@ This is a simple python scritp that I created to migrate data to a docker with s
 how to execute:
 > python3 procExecutor.py your_migration_folder
 
-or, if you are just testing, you should use the run.sql to put docker up and run the python
+or, if you are just testing, just execute the run.sql to put docker up and run the python
 > ./run.sh your_migration_folder
 
 changing sql connection:
@@ -25,7 +25,7 @@ changing sql connection:
 
 dependencies:
 
-To run this application install pyodbc (sql server dependency)
+To run this application, install pyodbc (sql server dependency)
 
 _how to install dependencies_:
 
@@ -36,7 +36,7 @@ pip3 install --user pyodbc
 
 ```
 
-If you are using my docker-compose file, you should access the sql bash using this guide:
+If you are using my docker-compose file, you can access the sql bash using this guide:
 
 ```
 #   -- To open docker shell --
