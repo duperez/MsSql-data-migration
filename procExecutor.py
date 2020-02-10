@@ -9,27 +9,21 @@ from os.path import isfile, join
 # /__/\__, |_| \__,_\__,_|\__\__,_|
 #        |_|                       
 
-server   = "localhost"
-user     = "SA"
+server = "localhost"
+user = "SA"
 password = "your@pass123"
-file     = "scripts/"
 
 
 class bcolors:
-    HEADER    = '\033[95m'
-    OKBLUE    = '\033[94m'
-    OKGREEN   = '\033[92m'
-    WARNING   = '\033[93m'
-    FAIL      = '\033[91m'
-    ENDC      = '\033[0m'
-    BOLD      = '\033[1m'
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
-
-#  _ __ _ _ ___  __ ___ ______
-# | '_ \ '_/ _ \/ _/ -_|    print(bcolors.HEADER + "process with file " + bcolors.WARNING + sys.argv[
-        2] + bcolors.HEADER + " has been initializated")
-    exec(conn, read_proc_file(sys.argv[2]))
 
 def get_database_info():
     lst = list()
@@ -47,18 +41,18 @@ def read_proc_file(name):
     return proc
 
 
-def exec(conn, proc):
-    conn.autocommit(True)
-    cursor = conn.cursor()
+def execute(connection, proc):
+    connection.autocommit(True)
+    cursor = connection.cursor()
     cursor.execute(proc)
 
 
-def set_environment(dir, conn):
+def set_environment(folder, connection):
     print(bcolors.HEADER + "setting environment up" + bcolors.HEADER)
-    onlyfiles = [f for f in listdir(dir) if isfile(join(dir, f))]
-    onlyfiles.sort()
-    for proc in onlyfiles:
-        exec(conn, read_proc_file(file + proc))
+    files = [f for f in listdir(folder) if isfile(join(folder, f))]
+    files.sort()
+    for proc in files:
+        execute(connection, read_proc_file(folder + proc))
         print(bcolors.WARNING + proc + bcolors.OKBLUE + " is now up to date")
     print(bcolors.OKGREEN + "environment configured" + bcolors.OKGREEN)
 
