@@ -25,7 +25,7 @@ changing sql connection:
 
 dependencies:
 
-To run this application, install pyodbc (sql server dependency)
+To run this application, install pyodbc (python dependency for sql server)
 
 _how to install dependencies_:
 
@@ -33,7 +33,6 @@ _how to install dependencies_:
 sudo apt install python3-pip
 sudo apt install unixodbc-dev
 pip3 install --user pyodbc
-
 ```
 
 If you are using my docker-compose file, you can access the sql bash using this guide:
@@ -42,12 +41,12 @@ If you are using my docker-compose file, you can access the sql bash using this 
 #   -- To open docker shell --
 docker exec -it <docker_id> "bash"
 
-#   -- To open sql shell --
+#   -- To open sql shell (execute on docker shell) --
 /opt/mssql-tools/bin/sqlcmd -S localhost -U <"user_name"> -P <"pass">
 ```
 in your environment folder:
 
-If you want an specific execution order of your files, just enumerate your files with a number, as the example bellow.
+If you want an specific execution order of your files, just enumerate your files as the example bellow.
 
 ```
 00_database_creation.sql
