@@ -1,3 +1,3 @@
 docker-compose up
 
-python3 procExecutor.py $0
+python3 project/procExecutor.py $0
