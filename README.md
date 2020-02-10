@@ -1,10 +1,12 @@
-
 This is a simple python scritp that I created to migrate data to a docker with sql server.
 
+[![#](https://img.shields.io/badge/licence-MIT-blue.svg)](#) [![#](https://img.shields.io/badge/python-3-yellow.svg)](#)
 
 how to execute:
-> python3 procExecutor.py your_migration_dir
+> python3 procExecutor.py your_migration_folder
 
+or, if you are just testing, you should use the run.sql to put docker up and run the python
+> ./run.sh your_migration_folder
 
 changing sql connection:
 
@@ -25,7 +27,7 @@ dependencies:
 
 To run this application install pyodbc (sql server dependency)
 
-_how to install_:
+_how to install dependencies_:
 
 ```
 sudo apt install python3-pip
@@ -37,9 +39,20 @@ pip3 install --user pyodbc
 If you are using my docker-compose file, you should access the sql bash using this guide:
 
 ```
-#   --    To open shell    --
+#   -- To open docker shell --
 docker exec -it <docker_id> "bash"
 
-#   --  To open sql shell  --
+#   -- To open sql shell --
 /opt/mssql-tools/bin/sqlcmd -S localhost -U <"user_name"> -P <"pass">
+```
+in your environment folder:
+
+If you want an specific execution order of your files, just enumerate your files with a number, as the example bellow.
+
+```
+00_database_creation.sql
+01_table_creation.sql
+.
+.
+.
 ```
