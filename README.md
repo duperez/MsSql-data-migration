@@ -1,6 +1,6 @@
-This is a simple python scritp that I created to migrate data to a docker with sql server.
-
 [![#](https://img.shields.io/badge/licence-MIT-blue.svg)](#) [![#](https://img.shields.io/badge/python-3-yellow.svg)](#)
+
+This is a simple python scritp that I created to migrate data to a docker with sql server.
 
 how to execute:
 > python3 procExecutor.py your_migration_folder
