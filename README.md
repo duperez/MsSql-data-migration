@@ -23,7 +23,7 @@ changing sql connection:
 
 dependencies:
 
-To run this application, you have to install pyodbc (sql server dependency)
+To run this application install pyodbc (sql server dependency)
 
 _how to install_:
 
@@ -34,7 +34,7 @@ pip3 install --user pyodbc
 
 ```
 
-If you are using my docker-compose file, you can access the sql bash using this guide:
+If you are using my docker-compose file, you should access the sql bash using this guide:
 
 ```
 #   --    To open shell    --
