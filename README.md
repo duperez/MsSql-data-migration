@@ -46,7 +46,7 @@ docker exec -it <docker_id> bash
 ```
 in your environment folder:
 
-If you want an specific execution order of your files, just enumerate your files as the example bellow.
+If you want an specific execution order of your files, just enumerate them as the example bellow.
 
 ```
 00_database_creation.sql
@@ -55,3 +55,5 @@ If you want an specific execution order of your files, just enumerate your files
 .
 .
 ```
+
+To get it easier, there is an example of how to put your sql files in 'project/envirnment' 
