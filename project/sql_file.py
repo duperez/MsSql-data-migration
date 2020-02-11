@@ -6,7 +6,5 @@ class sql_file:
 
     def set_data(self):
         sql = open(self.path + self.name, 'r')
-        proc = ''
         for line in sql:
-            proc = proc + line
-            self.data = proc
+            self.data = self.data + line
